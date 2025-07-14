@@ -178,6 +178,35 @@ def weekend_season(df):
 
 
 def main():
+    file_path='../../data/raw/train.csv'
+    output_path='../../data/processed/processed_train.csv'
+
+    # 读取数据
+    df = read_data(file_path)
+
+    # 填充缺失值
+    df = fill_data(df)
+
+    #填充缺失分钟的日期
+    df = process_minute_data(df)
+
+    # 按天进行数据聚合
+    df = daily_merge(df)
+        
+    # 处理异常值
+    df = handle_outliers(df)
+
+    # 标记周末和季节
+    df = weekend_season(df)
+
+    # 保存预处理后的数据
+    df.to_csv(output_path, index=False)
+    print(f"预处理后的数据已保存至 {output_path}")
+    print("处理后的数据基本信息：")
+    print(df.info())
+    print(df.head())
+
+
     file_path='../../data/raw/test.csv'
     output_path='../../data/processed/processed_test.csv'
 
