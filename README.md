@@ -34,7 +34,7 @@ cd machine-learning
 ```
 
 ### 步骤2：预处理原始数据
-将要处理的数据存放至至data/raw，命名格式为data/raw/train.cvs;data/raw/test.csv
+将要处理的数据存放至至data/raw，命名格式为data/raw/train.cvs;data/raw/test.csv  
 运行数据预处理脚本，将 data/raw 中的原始数据处理后保存到 data/processed：
 ```bash
 python src/models/lstm/lstm_90.py
