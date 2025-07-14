@@ -34,15 +34,15 @@ cd machine-learning
 ```
 
 ### 步骤2：预处理原始数据
-将要处理的数据存放至至data/raw，命名格式为data/raw/train.cvs;data/raw/test.csv  
-运行数据预处理脚本，将 data/raw 中的原始数据处理后保存到 data/processed：
+将要处理的数据存放至至data/raw，命名格式为data/raw/train.cvs；data/raw/test.csv  
+运行数据预处理脚本，数据处理后将自动保存到 data/processed：
 ```bash
-python src/models/lstm/lstm_90.py
+python src/data_process/preprocess.py
 ```
 
-### 训练并预测（以 LSTM 90 天模型为例）
+### 步骤3：训练并预测（以 LSTM 90 天模型为例）
 使用预处理后的数据集训练 LSTM 模型并进行 90 天预测：
-```
+```bash
 python src/models/lstm/lstm_90.py
 ```
 运行其他模型以此类推
@@ -50,5 +50,12 @@ python src/models/lstm/lstm_90.py
 
 ## 3. 注意事项
 
+- 运行前请确保 data/raw 目录中已存放原始数据（如 .csv 格式文件），否则预处理脚本会报错。
+
+
+- 预处理脚本会自动创建 data/processed 目录（若不存在），并生成训练集和测试集文件。
+
+- 
+- 模型训练过程中会自动保存训练日志和预测结果，默认路径为对应模型的目录下（如 src/models/lstm/）。
 
 
