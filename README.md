@@ -38,10 +38,13 @@ cd machine-learning
 运行数据预处理脚本，将 data/raw 中的原始数据处理后保存到 data/processed：
 ```bash
 python src/models/lstm/lstm_90.py
+```
 
 ### 训练并预测（以 LSTM 90 天模型为例）
 使用预处理后的数据集训练 LSTM 模型并进行 90 天预测：
+```
 python src/models/lstm/lstm_90.py
+```
 运行其他模型以此类推
 
 
