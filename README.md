@@ -3,6 +3,7 @@
 
 
 ## 1. 项目文件结构
+```
 machine-learning/
 ├── data/
 │   ├── raw/                  # 存放原始数据
@@ -20,6 +21,7 @@ machine-learning/
         └── transformer/
             ├── transformer.py    # Transformer基础模型
             └── transformer_enhance.py  # Transformer改进模型
+```
             
 
 ## 2. 快速开始
