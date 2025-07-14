@@ -33,14 +33,20 @@ git clone https://github.com/vanila2001/machine-learning.git
 cd machine-learning
 ```
 
-### 步骤2：预处理原始数据
+### 步骤2：环境配置
+安装项目所需的依赖库，确保运行环境一致：
+```bash
+pip install -r requirements.txt
+```
+
+### 步骤3：预处理原始数据
 将要处理的数据存放至至data/raw，命名格式为data/raw/train.cvs；data/raw/test.csv  
 运行数据预处理脚本，数据处理后将自动保存到 data/processed：
 ```bash
 python src/data_process/preprocess.py
 ```
 
-### 步骤3：训练并预测（以 LSTM 90 天模型为例）
+### 步骤4：训练并预测（以 LSTM 90 天模型为例）
 使用预处理后的数据集训练 LSTM 模型并进行 90 天预测：
 ```bash
 python src/models/lstm/lstm_90.py
